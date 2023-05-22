@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #090909;
+  padding: 50px;
+}
+/* General styles end */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f2327;
+  padding-block: 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.logo img {
+  display: flex;
+  margin-right: 50px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+#toggler,
+.navbar label {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#sc {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 4%;
+}
+.icons {
+  display: flex;
+  column-gap: 25px;
+}
+.icon {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+.icon:hover {
+  outline-offset: 4px;
+}
+.icon i {
+  margin: auto;
+}
+.icon:hover i {
+  animation: shake 0.25s;
+}
+.icon--instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+}
+.icon--twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+.icon--github:hover {
+  background-color: #2ea44f;
+  outline-color: #2ea44f;
+}
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+#sv {
+  font-family: "Poppins", sans-serif;
+  background-color: #090909;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 4%;
+  right: 50px;
+}
+.button {
+  --color: #fff;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--color);
+  padding: 5px 8px;
+  border: 3px solid var(--color);
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: inherit;
+  transition: width 0.25s 0.15s, height 0.25s;
+}
+
+.button::before {
+  top: -15px;
+  left: -15px;
+  border-width: 3px 0 0 3px;
+}
+
+.button::after {
+  bottom: -15px;
+  right: -15px;
+  border-width: 0 3px 3px 0;
+}
+
+.button:hover::before,
+.button:hover::after {
+  width: calc(100% + 27px);
+  height: calc(100% + 27px);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.toggle-button span {
+  display: flex;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+}
+
+#sidebar.show {
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+}
+
+.toggle-button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: white;
+  opacity: 0.7;
+  z-index: 999;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+#sidebar.show {
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+.kata h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  font-style: italic;
+}
+.container1 {
+  float: right;
+}
+.toggle-button1 {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+}
+
+.toggle-button1 span {
+  display: flex;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: black;
+  transition: all 0.3s ease;;
+}
+.aktivitas{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  transform: translate(-100%, 0%);
+}
+
+.toggle-button1.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle-button1.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button1.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
